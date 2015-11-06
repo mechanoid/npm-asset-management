@@ -11,6 +11,6 @@ that you may not want to be accessible for clients too.
 
 When your build your stuff like this, you have to remember, that this type of dependency listing is not a link to your sub folder, so installing new asset dependencies, you have to make sure, to remove the installed asset-dependency version from your node_modules folder, and rebuild it.
 
-And also make sure, to run `npm install` in your asset directory in beforehand.
+## development 
 
 For development purposes `npm link` may be your friend.

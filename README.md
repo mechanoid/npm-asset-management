@@ -7,10 +7,24 @@ An idea on how to solve this is described here. Just manage the asset dependenci
 By doing this your asset files will be grouped in the scope folder, and can for example packaged into the result build for your frontend code seperately from your backend dependencies,
 that you may not want to be accessible for clients too.
 
-## build
+## usage
 
-When your build your stuff like this, you have to remember, that this type of dependency listing is not a link to your sub folder, so installing new asset dependencies, you have to make sure, to remove the installed asset-dependency version from your node_modules folder, and rebuild it.
+**installing a new asset**
 
-## development 
+here for example, angular:
+
+```
+# register the new dependency
+cd ./asset-dependencies
+npm install --save angular
+# make sure the follow up installation, will catch the new assets
+npm version minor
+
+# install the new dependency
+cd ..
+npm install
+```
+
+## development
 
 For development purposes `npm link` may be your friend.
